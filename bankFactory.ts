@@ -1,5 +1,5 @@
 class BankFactory {
-  createBank(type: string, amount: number, sender: string): Bank {
+  transferToBank(type: string, amount: number, sender: string): Bank {
     switch (type) {
       case 'bank_A':
         return new Bank_A(amount, sender);
@@ -58,5 +58,5 @@ class Bank_B extends Bank {
 
 const bankFactory = new BankFactory();
 
-const a_Bank = bankFactory.createBank('bankd_B', 33433, 'df');
+const a_Bank = bankFactory.transferToBank('bank_B', 30000, 'Khaled');
 a_Bank.withdraw();
